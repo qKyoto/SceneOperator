@@ -1,0 +1,141 @@
+.container-dropdown {
+    flex-direction: row;
+    flex-grow: 1;
+    max-height: 22px;
+    min-height: 22px;
+    align-self: center;
+    margin-top: 4px;
+}
+
+.horizontal-line {
+    background-color: rgb(212, 245, 245);
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.active-collection-view {
+    transform-origin: top;
+    margin-bottom: 15px;
+    align-self: auto;
+}
+
+.scene-collection-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    padding-left: 2px;
+    border-left-color: rgb(212, 245, 245);
+    border-left-width: 1px;
+}
+
+.group-header {
+    flex-direction: row;
+}
+
+.scene-content {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.zero-height {
+    min-width: 0;
+    min-height: 0;
+    max-height: 0;
+    max-width: 0;
+    width: 0;
+    height: 0;
+    position: relative;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.scene-name-label {
+    overflow: hidden;
+    -unity-text-align: middle-left;
+}
+
+Button {
+    text-overflow: clip;
+    border-left-color: rgb(88, 88, 88);
+    border-right-color: rgb(88, 88, 88);
+    border-top-color: rgb(88, 88, 88);
+    border-bottom-color: rgb(88, 88, 88);
+}
+
+Button:hover:enabled {
+    background-color: rgb(116, 117, 120);
+}
+
+Button:focus {
+    border-left-color: rgb(147, 183, 190);
+    border-right-color: rgb(147, 183, 190);
+    border-top-color: rgb(147, 183, 190);
+    border-bottom-color: rgb(147, 183, 190);
+}
+
+.unload-button {
+    background-image: url('project://database/Packages/com.tmg.scene-operator/Art/Sprites/Sprite_UnloadButton_Up.png?fileID=2800000&guid=6cfd78524a90f4646b20693db5d805dd&type=3#Sprite_UnloadButton_Up');
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.highlight-button {
+    background-color: rgb(85, 67, 72);
+}
+
+.button-size-100 {
+    min-width: 100px;
+    max-width: 100px;
+}
+
+.toggle-content-button {
+}
+
+.ping-button {
+    max-height: 20px;
+    min-height: 20px;
+    background-image: url('project://database/Packages/com.tmg.scene-operator/Art/Sprites/Sprite_SelectButton.png?fileID=2800000&guid=a92671b1359658240844246307e8c797&type=3#Sprite_SelectButton');
+    max-width: 20px;
+    min-width: 20px;
+}
+
+.signature {
+    max-height: 15px;
+    min-height: 15px;
+    position: absolute;
+    align-self: center;
+    bottom: 0;
+    font-size: 10px;
+    -unity-text-align: middle-center;
+    opacity: 0.3;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.signature-icon {
+    background-color: rgba(255, 255, 255, 0);
+    min-width: 15px;
+    max-width: none;
+    max-height: 15px;
+    min-height: 15px;
+    margin-right: 1px;
+    background-image: url('project://database/Packages/com.tmg.scene-operator/Art/Sprites/Sprite_Signature_Variant_1.png?fileID=2800000&guid=9e0edfdab5548ea4ca638c4d1a995cb6&type=3#Sprite_Signature_Variant_1');
+}
+
+.signature-label {
+}
+
+.stretch {
+    flex-grow: 1;
+    min-width: 100px;
+}
+
+.button-size-20 {
+    min-width: 20px;
+    max-width: 20px;
+}
+
+.button-size-46 {
+    min-width: 46px;
+}

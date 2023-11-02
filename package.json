@@ -1,0 +1,14 @@
+{
+  "name": "com.kyoto.scene-operator",
+  "version": "1.0.0",
+  "displayName": "Scene Operator",
+  "description": "",
+  "author": {
+    "name": "Anatoly Garchik",
+    "email": "anatoly.garchik@gmail.com",
+    "url": ""
+  },
+  "publishConfig": {
+    "registry": ""
+  }
+}
