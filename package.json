@@ -2,13 +2,11 @@
   "name": "com.kyoto.scene-operator",
   "version": "1.0.0",
   "displayName": "Scene Operator",
-  "description": "",
+  "description": "Scene management in Editor mode",
+  "documentationUrl": "https://github.com/qKyoto/Scene_Operator",
   "author": {
     "name": "Anatoly Garchik",
     "email": "anatoly.garchik@gmail.com",
     "url": ""
-  },
-  "publishConfig": {
-    "registry": ""
   }
 }
