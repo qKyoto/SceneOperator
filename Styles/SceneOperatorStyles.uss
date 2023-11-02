@@ -74,7 +74,7 @@ Button:focus {
 }
 
 .unload-button {
-    background-image: url('project://database/Packages/com.tmg.scene-operator/Art/Sprites/Sprite_UnloadButton_Up.png?fileID=2800000&guid=6cfd78524a90f4646b20693db5d805dd&type=3#Sprite_UnloadButton_Up');
+    background-image: url('project://database/Packages/com.kyoto.scene-operator/Art/Sprites/Sprite_UnloadButton_Up.png?fileID=2800000&guid=6cfd78524a90f4646b20693db5d805dd&type=3#Sprite_UnloadButton_Up');
     -unity-background-scale-mode: scale-to-fit;
 }
 
@@ -93,7 +93,7 @@ Button:focus {
 .ping-button {
     max-height: 20px;
     min-height: 20px;
-    background-image: url('project://database/Packages/com.tmg.scene-operator/Art/Sprites/Sprite_SelectButton.png?fileID=2800000&guid=a92671b1359658240844246307e8c797&type=3#Sprite_SelectButton');
+    background-image: url('project://database/Packages/com.kyoto.scene-operator/Art/Sprites/Sprite_SelectButton.png?fileID=2800000&guid=a92671b1359658240844246307e8c797&type=3#Sprite_SelectButton');
     max-width: 20px;
     min-width: 20px;
 }
@@ -120,7 +120,7 @@ Button:focus {
     max-height: 15px;
     min-height: 15px;
     margin-right: 1px;
-    background-image: url('project://database/Packages/com.tmg.scene-operator/Art/Sprites/Sprite_Signature_Variant_1.png?fileID=2800000&guid=9e0edfdab5548ea4ca638c4d1a995cb6&type=3#Sprite_Signature_Variant_1');
+    background-image: url('project://database/Packages/com.kyoto.scene-operator/Art/Sprites/Sprite_Signature_Variant_1.png?fileID=2800000&guid=9e0edfdab5548ea4ca638c4d1a995cb6&type=3#Sprite_Signature_Variant_1');
 }
 
 .signature-label {
