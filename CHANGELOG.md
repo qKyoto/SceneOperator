@@ -11,3 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Scene Operator
+
+## [1.0.2] - 2023-12-16
+
+### Changed
+
+Updated assembly
