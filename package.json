@@ -1,6 +1,6 @@
 {
   "name": "com.kyoto.scene-operator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Scene Operator",
   "description": "Scene management in Editor mode",
   "documentationUrl": "https://github.com/qKyoto/Scene_Operator",
