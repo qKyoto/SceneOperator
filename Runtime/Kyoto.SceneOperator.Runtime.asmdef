@@ -1,8 +1,10 @@
 {
-    "name": "SceneOperator",
+    "name": "Kyoto.SceneOperator.Runtime",
     "rootNamespace": "SceneOperator",
     "references": [],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

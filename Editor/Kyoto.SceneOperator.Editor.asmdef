@@ -1,8 +1,8 @@
 {
-    "name": "TMG.SceneOperator.Editor",
+    "name": "Kyoto.SceneOperator.Editor",
     "rootNamespace": "SceneOperator",
     "references": [
-        "SceneOperator"
+        "Kyoto.SceneOperator.Runtime"
     ],
     "includePlatforms": [
         "Editor"
