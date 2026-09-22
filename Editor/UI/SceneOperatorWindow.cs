@@ -98,12 +98,12 @@ namespace SceneOperator.Editor
             _collectionLabel.AddToClassList("so-collection-label");
             var arrow = new VisualElement();
             arrow.AddToClassList("so-collection-arrow");
-            SetIcon(arrow, PackageResources.BuiltIn("d_icon dropdown"));
+            SetIcon(arrow, PackageResources.BuiltIn("icon dropdown"));
             collectionButton.Add(_collectionLabel);
             collectionButton.Add(arrow);
 
             toolbar.Add(collectionButton);
-            toolbar.Add(IconButton(PackageResources.Sprite("Sprite_SelectButton.png"), "Show the collection in the Project window", PingCollection));
+            toolbar.Add(IconButton(PackageResources.BuiltIn("Project"), "Show the collection in the Project window", PingCollection));
             toolbar.Add(IconButton(PackageResources.BuiltIn("Search Icon"), "Open the scene switcher", () => SceneSwitcherPopup.Open()));
             toolbar.Add(IconButton(PackageResources.BuiltIn("_Popup"), "Scene Operator preferences", OpenPreferences));
 
@@ -336,8 +336,8 @@ namespace SceneOperator.Editor
 
                 _additive = IconButton(PackageResources.BuiltIn("Toolbar Plus"), "Open additively (Ctrl+click the row)", () => SceneOps.OpenAdditive(_item.Path));
                 _play = IconButton(PackageResources.BuiltIn("PlayButton"), "Open this scene alone and enter play mode", () => SceneOps.OpenAndPlay(_item.Path));
-                Button ping = IconButton(PackageResources.Sprite("Sprite_SelectButton.png"), "Show in the Project window", () => SceneOps.Ping(_item.Path));
-                _close = IconButton(PackageResources.Sprite("Sprite_UnloadButton_Up.png"), "Close this scene", () => SceneOps.Close(_item.Path));
+                Button ping = IconButton(PackageResources.BuiltIn("Project"), "Show in the Project window", () => SceneOps.Ping(_item.Path));
+                _close = IconButton(PackageResources.BuiltIn("Toolbar Minus"), "Close this scene", () => SceneOps.Close(_item.Path));
 
                 Add(_additive);
                 Add(_play);

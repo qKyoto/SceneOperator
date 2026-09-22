@@ -52,8 +52,20 @@ namespace SceneOperator.Editor
             return AssetDatabase.LoadAssetAtPath<Texture2D>(Root + "/Art/Sprites/" + fileName);
         }
 
-        /// <summary>A built-in editor icon; returns null instead of throwing when the name is unknown.</summary>
+        /// <summary>
+        /// A built-in editor icon. Unity picks the light or dark variant by itself for most names;
+        /// for the ones that only ship a dark version the "d_" prefix is tried as a fallback.
+        /// Returns null instead of throwing when the name is unknown.
+        /// </summary>
         public static Texture2D BuiltIn(string iconName)
+        {
+            Texture2D icon = Load(iconName);
+            if (icon == null && !iconName.StartsWith("d_"))
+                icon = Load("d_" + iconName);
+            return icon;
+        }
+
+        private static Texture2D Load(string iconName)
         {
             try
             {

@@ -20,8 +20,8 @@ Their names are hidden by default (they can be turned on in the preferences).
 | Click a row | Open the scene, replacing the open ones |
 | Ctrl+click a row (or the `+` button) | Open the scene additively |
 | ▶ | Open the scene alone and enter play mode |
-| ⊙ | Show the scene in the Project window |
-| ✕ | Close the scene |
+| Project icon | Show the scene in the Project window |
+| − | Close the scene |
 | Right-click a row | All of the above, plus *Set Active*, *Save* and *Open Whole Group* |
 
 Rows show what is going on: open scenes are tinted, the active scene is bold with a colored stripe,
