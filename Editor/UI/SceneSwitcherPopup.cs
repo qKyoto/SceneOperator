@@ -418,16 +418,19 @@ namespace SceneOperator.Editor
             if (active)
                 EditorGUI.DrawRect(new Rect(rowRect.x + 2f, rowRect.y, 3f, rowRect.height), SceneOperatorSettings.ActiveAccent.Value);
 
-            GUIStyle nameStyle = selected ? styles.NameSelected : styles.Name;
             var nameRect = new Rect(rowRect.x + SidePadding + 4f, rowRect.y, rowRect.width - SidePadding * 2f - 8f, rowRect.height);
 
             string name = item.Name;
             if (SceneOps.IsDirty(item.Path))
                 name += " *";
 
-            float nameWidth = Mathf.Min(nameStyle.CalcSize(Temp(name)).x, nameRect.width);
+            // The active scene is drawn bold, which is wider than the regular font: measure with the style
+            // that actually draws, otherwise the name gets clipped.
+            GUIStyle drawStyle = active
+                ? (selected ? styles.NameSelectedBold : styles.NameBold)
+                : (selected ? styles.NameSelected : styles.Name);
+            float nameWidth = Mathf.Min(drawStyle.CalcSize(Temp(name)).x + 1f, nameRect.width);
             var textRect = new Rect(nameRect.x, nameRect.y, nameWidth, nameRect.height);
-            GUIStyle drawStyle = active ? (selected ? styles.NameSelectedBold : styles.NameBold) : nameStyle;
             drawStyle.Draw(textRect, Temp(name), false, false, false, false);
 
             if (SceneOperatorSettings.SwitcherShowPaths)
