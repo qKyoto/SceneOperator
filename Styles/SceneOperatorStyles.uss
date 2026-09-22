@@ -1,141 +1,170 @@
-.container-dropdown {
-    flex-direction: row;
+/* Layout only — every color comes from the preferences (Edit > Preferences > Scene Operator). */
+
+.so-root {
     flex-grow: 1;
-    max-height: 22px;
-    min-height: 22px;
-    align-self: center;
-    margin-top: 4px;
 }
 
-.horizontal-line {
-    background-color: rgb(212, 245, 245);
-    margin-top: 4px;
-    margin-bottom: 4px;
-}
+/* ---------------------------------------------------------------- toolbar */
 
-.active-collection-view {
-    transform-origin: top;
-    margin-bottom: 15px;
-    align-self: auto;
-}
-
-.scene-collection-content {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 5px;
-    padding-left: 2px;
-    border-left-color: rgb(212, 245, 245);
-    border-left-width: 1px;
-}
-
-.group-header {
+.so-toolbar {
     flex-direction: row;
+    align-items: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
-.scene-content {
+.so-collection-button {
     flex-grow: 1;
     flex-direction: row;
+    align-items: center;
+    height: 20px;
+    margin: 0;
+    padding-left: 6px;
+    padding-right: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-width: 0;
+    border-radius: 3px;
 }
 
-.zero-height {
-    min-width: 0;
-    min-height: 0;
-    max-height: 0;
-    max-width: 0;
-    width: 0;
-    height: 0;
-    position: relative;
-    visibility: hidden;
-    overflow: hidden;
+.so-collection-button:hover {
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
-.scene-name-label {
+.so-collection-label {
+    flex-grow: 1;
     overflow: hidden;
     -unity-text-align: middle-left;
+    margin: 0;
+    padding: 0;
 }
 
-Button {
-    text-overflow: clip;
-    border-left-color: rgb(88, 88, 88);
-    border-right-color: rgb(88, 88, 88);
-    border-top-color: rgb(88, 88, 88);
-    border-bottom-color: rgb(88, 88, 88);
-}
-
-Button:hover:enabled {
-    background-color: rgb(116, 117, 120);
-}
-
-Button:focus {
-    border-left-color: rgb(147, 183, 190);
-    border-right-color: rgb(147, 183, 190);
-    border-top-color: rgb(147, 183, 190);
-    border-bottom-color: rgb(147, 183, 190);
-}
-
-.unload-button {
-    background-image: url('project://database/Packages/com.kyoto.scene-operator/Art/Sprites/Sprite_UnloadButton_Up.png?fileID=2800000&guid=6cfd78524a90f4646b20693db5d805dd&type=3#Sprite_UnloadButton_Up');
+.so-collection-arrow {
+    width: 12px;
+    height: 12px;
     -unity-background-scale-mode: scale-to-fit;
 }
 
-.highlight-button {
-    background-color: rgb(85, 67, 72);
+.so-icon-button {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    margin-left: 3px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    -unity-background-scale-mode: scale-to-fit;
 }
 
-.button-size-100 {
-    min-width: 100px;
-    max-width: 100px;
+.so-icon-button:hover:enabled {
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
-.toggle-content-button {
+.so-icon-button:disabled {
+    opacity: 0.35;
 }
 
-.ping-button {
-    max-height: 20px;
-    min-height: 20px;
-    background-image: url('project://database/Packages/com.kyoto.scene-operator/Art/Sprites/Sprite_SelectButton.png?fileID=2800000&guid=a92671b1359658240844246307e8c797&type=3#Sprite_SelectButton');
-    max-width: 20px;
-    min-width: 20px;
+.so-toolbar-divider {
+    height: 1px;
+    margin-bottom: 2px;
 }
 
-.signature {
-    max-height: 15px;
-    min-height: 15px;
-    position: absolute;
-    align-self: center;
-    bottom: 0;
-    font-size: 10px;
-    -unity-text-align: middle-center;
-    opacity: 0.3;
+/* ---------------------------------------------------------------- list */
+
+.so-scroll {
     flex-grow: 1;
+}
+
+.so-row {
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
+    padding-right: 4px;
 }
 
-.signature-icon {
-    background-color: rgba(255, 255, 255, 0);
-    min-width: 15px;
-    max-width: none;
-    max-height: 15px;
-    min-height: 15px;
-    margin-right: 1px;
-    background-image: url('project://database/Packages/com.kyoto.scene-operator/Art/Sprites/Sprite_Signature_Variant_1.png?fileID=2800000&guid=9e0edfdab5548ea4ca638c4d1a995cb6&type=3#Sprite_Signature_Variant_1');
+.so-row-accent {
+    width: 3px;
+    height: 100%;
+    margin-right: 5px;
 }
 
-.signature-label {
-}
-
-.stretch {
+.so-row-name {
     flex-grow: 1;
-    min-width: 100px;
+    overflow: hidden;
+    -unity-text-align: middle-left;
+    margin: 0;
+    padding: 0;
 }
 
-.button-size-20 {
-    min-width: 20px;
-    max-width: 20px;
+.so-row-dirty {
+    margin: 0;
+    padding: 0;
+    margin-right: 4px;
+    -unity-text-align: middle-center;
 }
 
-.button-size-46 {
-    min-width: 46px;
+.so-row .so-icon-button {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+}
+
+/* ---------------------------------------------------------------- groups */
+
+.so-divider-wrapper {
+    padding-top: 4px;
+    padding-bottom: 2px;
+}
+
+.so-divider {
+    height: 1px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.so-group-label {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    padding-left: 8px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    -unity-text-align: middle-left;
+}
+
+/* ---------------------------------------------------------------- empty state */
+
+.so-empty {
+    white-space: normal;
+    -unity-text-align: middle-center;
+    margin-top: 18px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.so-empty-button {
+    align-self: center;
+    margin-top: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 22px;
+}
+
+/* ---------------------------------------------------------------- signature */
+
+.so-signature {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    font-size: 10px;
+    opacity: 0.35;
+}
+
+.so-signature-icon {
+    width: 13px;
+    height: 13px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -unity-background-scale-mode: scale-to-fit;
 }
