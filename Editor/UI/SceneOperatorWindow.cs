@@ -339,10 +339,10 @@ namespace SceneOperator.Editor
                 Button ping = IconButton(PackageResources.BuiltIn("Project"), "Show in the Project window", () => SceneOps.Ping(_item.Path));
                 _close = IconButton(PackageResources.BuiltIn("Toolbar Minus"), "Close this scene", () => SceneOps.Close(_item.Path));
 
+                Add(_close);
                 Add(_additive);
                 Add(_play);
                 Add(ping);
-                Add(_close);
 
                 RegisterCallback<MouseEnterEvent>(_ => SetHovered(true));
                 RegisterCallback<MouseLeaveEvent>(_ => SetHovered(false));
