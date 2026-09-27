@@ -1,6 +1,6 @@
 {
   "name": "com.kyoto.scene-operator",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "displayName": "Scene Operator",
   "description": "Scene management in the Unity editor: collections of the scenes you work with, a one-click list to open them, and a searchable quick switcher on a shortcut.",
   "unity": "2022.3",
